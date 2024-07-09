@@ -1,37 +1,37 @@
-# Noise Explained
+# 噪声详解
 
-Noise can be a complex topic for anyone who has never read into it before, but in its simplest terms, noise is a way of getting a value out of some input (usually X,Y,Z coordinates).
+对于从未接触过噪声的人来说，这可能是一个复杂的话题，但最简单的说，噪声是一种通过某些输入（通常是 X、Y、Z 坐标）获取值的方法。
 
-The place you will likely be most familiar with noise is in Minecraft's terrain generation. At every point in the world, several noise functions are combined to determine if a block should be placed, and if so, which block.
+你最熟悉噪声的地方可能是 Minecraft 的地形生成。在世界的每一个点，多个噪声函数结合起来决定是否放置一个方块，如果是的话，还会决定放置哪个方块。
 
-This is pretty much what we do in ezEdits, using noise to generate shapes, terrain, and textures.
-
-
-
-Within the plugin you will find several noise types, with each having different characteristics, and Cellular specifically coming with many additional parameters you can customise.
-
-Some of the many features that use noise include:
-
-* `//eznoisegen ...` - *Noisegen Commands*
-* `#eznoisemask` - *Masks*
-* `//ezbrush gradient ...` - *Brushes*
+在 ezEdits 中，我们基本上就是这样做的，使用噪声生成形状、地形和纹理。
 
 
 
-_Noise in ezEdits based on a modified version of FastNoiseLite, so we strongly recommend this website to experiment with noise parameters:_ [_http://auburn.github.io/FastNoiseLite/_ ](http://auburn.github.io/FastNoiseLite/)
+在这个插件中，你会发现几种不同类型的噪声，每种噪声都有不同的特性，尤其是 Cellular 噪声，它带有许多额外的可自定义参数。
 
-## Noise Parameters
+一些使用噪声的功能包括：
 
-Each parameter and many values also has a shorthand, such as "Fractal" instead of "FractalType" or "Simplex" instead of "OpenSimplex2". Wherever this is possible, the shorthand will be shown in brackets.\
-<mark style="color:red;">`Red = Parameter`</mark>    <mark style="color:purple;">`Purple = Value`</mark>
+* `//eznoisegen ...` - *噪声生成指令*
+* `#eznoisemask` - *蒙版*
+* `//ezbrush gradient ...` - *笔刷*
+
+
+
+_ezEdits 中的噪声基于修改后的 FastNoiseLite 版本，因此我们强烈推荐使用这个网站来试验噪声参数：_ [_http://auburn.github.io/FastNoiseLite/_ ](http://auburn.github.io/FastNoiseLite/)
+
+## 噪声参数
+
+每个参数和许多值都有简写，例如 "Fractal" 代替 "FractalType" 或 "Simplex" 代替 "OpenSimplex2"。在可能的地方，简写将显示在括号中。\
+<mark style="color:red;">`红色 = 参数`</mark>    <mark style="color:purple;">`紫色 = 值`</mark>
 
 &#x20;
 
-### Noise Type
+### 噪声类型
 
 <details>
 
-<summary>Setting the Noise Type<br><mark style="color:red;"></summary>
+<summary>设置噪声类型<br><mark style="color:red;"></summary>
 
 Sets the type of noise to be used. This is the start of any noise and will be in the format of `Noise()`, for example `Perlin()`, where all other parameters will go between the brackets.
 
